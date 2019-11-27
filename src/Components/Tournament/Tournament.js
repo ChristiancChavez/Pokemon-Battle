@@ -1,21 +1,12 @@
 
-import React, { Component } from 'react';
+import React from 'react';
 //Components
 import Header from '../Header/Header';
 
-class Tournament extends Component {
-    state = {
-        title:'Tournament',
-    }
-
-    render(){
-        const { title } = this.state;
-        return (
-            <div>
-                <Header title={title} />
-            </div>
-        )
-    }
-}
+const Tournament = ({ title }) => (
+    <div>
+        <Header title={title} />
+    </div>
+)
 
 export default Tournament;

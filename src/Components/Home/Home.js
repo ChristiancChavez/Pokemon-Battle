@@ -1,21 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 //Components
 import Header from '../Header/Header';
 
-class Home extends Component {
-    state = {
-        title: 'Battle Pokemon'
-    }
-    render(){
-        const { title } = this.state;
-        return (
-            <div>
-                <Header title={title} />
-            </div>
-        )
-    }
-}
-    
+const Home = ({ title }) => (
+    <div>
+        <Header title={title} />
+    </div>
+)
 
 export default Home;
