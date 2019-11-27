@@ -1,0 +1,29 @@
+//variables
+$size-image-header: 7em;
+$size-image-menu: 5em;
+$size-user-icon: 10em;
+
+.header {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(90px, 1fr));
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.header__imageHeader {
+    width: $size-image-header;
+    height: $size-image-header;
+    cursor: pointer;
+}
+
+.header__title {
+    font-size: 6em;
+    color: black;
+}
+.header__imageMenu {
+    width: $size-image-menu;
+    height: $size-image-menu;
+    cursor: pointer;
+}
