@@ -3,10 +3,13 @@ import React from 'react';
 //Components
 import Header from '../Header/Header';
 
-const Tournament = ({ title }) => (
-    <div>
-        <Header title={title} />
-    </div>
-)
+const Tournament = ({ ...rest }) => {
+    const title = rest.location.pathname.substring(1);
+    return (
+        <div>
+            <Header title={title} />
+        </div>
+    )
+}
 
 export default Tournament;

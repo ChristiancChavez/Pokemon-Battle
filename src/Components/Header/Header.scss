@@ -21,6 +21,7 @@ $size-user-icon: 10em;
 .header__title {
     font-size: 6em;
     color: black;
+    text-transform: capitalize
 }
 .header__imageMenu {
     width: $size-image-menu;

@@ -3,10 +3,16 @@ import React from 'react';
 //Components
 import Header from '../Header/Header';
 
-const Home = ({ title }) => (
+const Home = ({ ...rest }) => {
+    let title = rest.location.pathname;
+    if(rest.location.pathname.length <= 1) {
+       title = 'Home'
+    } 
+    return ( 
     <div>
         <Header title={title} />
-    </div>
-)
+    </div>)
+    
+}
 
 export default Home;
