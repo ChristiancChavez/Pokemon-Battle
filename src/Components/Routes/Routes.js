@@ -8,8 +8,8 @@ import Home from '../Home';
 
 const Routes = () => (
     <Switch>
-        <Route exact path="/" component={(rest) => <Home {...rest} />} />
-        <Route exact path="/tournament" component={(rest) => <Tournament {...rest} />} />
+        <Route exact path="/" component= {Home} /> 
+        <Route exact path="/tournament" component= {Tournament} />
     </Switch>
 )
 
