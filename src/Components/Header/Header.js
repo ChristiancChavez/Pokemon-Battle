@@ -1,5 +1,6 @@
 
 import React from 'react';
+import PropTypes from 'prop-types';
 //Assets
 import pokeballs from '../../Assets/images/pokeballs.png';
 import pokeball from '../../Assets/images/pokeball.png';
@@ -19,4 +20,7 @@ const Header = ({ title }) => {
     )
 }
 
+Header.propTypes = {
+    title: PropTypes.string.isRequired,
+}
 export default Header;
