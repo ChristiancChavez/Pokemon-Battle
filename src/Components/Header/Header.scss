@@ -10,20 +10,24 @@ $size-user-icon: 10em;
     align-items: center;
     text-align: center;
     position: relative;
-}
-
-.header__imageHeader {
-    width: $size-image-header;
-    height: $size-image-header;
-    cursor: pointer;
-}
-
-.header__title {
-    font-size: 6em;
-    color: black;
-}
-.header__imageMenu {
-    width: $size-image-menu;
-    height: $size-image-menu;
-    cursor: pointer;
+    &__imageHeader {
+        width: $size-image-header;
+        height: $size-image-header;
+        cursor: pointer;
+    }
+    &__imageHeader {
+        width: $size-image-header;
+        height: $size-image-header;
+        cursor: pointer;
+    }
+    &__title {
+        font-size: 6em;
+        color: black;
+        text-transform: capitalize;
+    }
+    &__imageMenu {
+        width: $size-image-menu;
+        height: $size-image-menu;
+        cursor: pointer;
+    }
 }

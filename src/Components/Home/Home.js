@@ -3,9 +3,9 @@ import React from 'react';
 //Components
 import Header from '../Header/Header';
 
-const Home = ({ title }) => (
+const Home = ({ location:{ pathname } }) => ( 
     <div>
-        <Header title={title} />
+        <Header title={pathname} />
     </div>
 )
 
