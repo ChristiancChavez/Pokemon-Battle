@@ -11,7 +11,6 @@ const Home = ({ location:{ pathname } }) => (
 
 Home.protoTypes = {
     location: PropTypes.object.isRequired,
-    pathname: PropTypes.string.isRequired,
 }
 
 export default Home;

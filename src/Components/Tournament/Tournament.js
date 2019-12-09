@@ -12,7 +12,6 @@ const Tournament = ({ location:{ pathname }}) => (
 
 Tournament.protoTypes = {
     location: PropTypes.object.isRequired,
-    pathname: PropTypes.string.isRequired,
 }
 
 export default Tournament;
