@@ -1,22 +1,15 @@
 .App {
   text-align: center;
+  font-size: 10px;
+  font-family: 'pokemonSolid';
 }
 
-.App-logo {
-  height: 40vmin;
+@font-face {
+  font-family: 'pokemonHollow';
+  src: url('../../Assets/fonts/Pokemon\ Hollow.ttf') format('truetype');
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
+@font-face {
+  font-family: 'pokemonSolid';
+  src: url('../../Assets/fonts/Pokemon\ Solid.ttf') format('truetype');
 }
