@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'pokemonHollow';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../Assets/fonts/pokemonhollow-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'pokemonSolid';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../Assets/fonts/pokemonsolid-webfont.woff') format('woff');
+}
+
+body {
+  text-align: center;
+  font-size: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+

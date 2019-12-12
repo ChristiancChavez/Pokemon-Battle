@@ -1,33 +1,39 @@
 //variables
-$size-image-header: 7em;
-$size-image-menu: 5em;
-$size-user-icon: 10em;
+
 
 .header {
     display: grid;
-    grid-template-columns: repeat(3, minmax(90px, 1fr));
-    justify-items: center;
+    grid-template-columns: 60% 40%;
     align-items: center;
-    text-align: center;
-    position: relative;
-    &__imageHeader {
-        width: $size-image-header;
-        height: $size-image-header;
-        cursor: pointer;
+    font-family: 'pokemonSolid';
+    color: white;
+    &-title {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        &__name {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: red;
+            margin-right: 0.5em;
+        }
+        &__image {
+            width: 2.5em;
+            height: 2.5em;
+            align-self: center;
+            padding-bottom: 1.5em;
+        }
     }
-    &__imageHeader {
-        width: $size-image-header;
-        height: $size-image-header;
-        cursor: pointer;
-    }
-    &__title {
-        font-size: 6em;
-        color: black;
-        text-transform: capitalize;
-    }
-    &__imageMenu {
-        width: $size-image-menu;
-        height: $size-image-menu;
-        cursor: pointer;
+    &-nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-flow: row nowrap;
+        color: white;
+        &__page {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5em;
+        }
     }
 }
