@@ -9,8 +9,8 @@ import './Header.scss';
 
 
 const Header = ({ title }) => {
-   const mainTitle= title.substring(1) || 'Home'; 
-   const enterBtn= 'enter'; 
+   const mainTitle = title.substring(1) || 'Home'; 
+   const classBtn = '--transparent';
 
     return (
         <section className="header">
@@ -19,11 +19,12 @@ const Header = ({ title }) => {
                 <img className="header-title__image" src={pokeball} alt="pokeball" />
             </div>
             <nav className="header-nav">
-                <a href="#" className="header-nav__page">{mainTitle}</a>
-                <a href="#" className="header-nav__page">Tournament</a>
-                <a href="#" className="header-nav__page">PokeCards</a>
-                <a href="#" className="header-nav__page">PokeAlbum</a>
-                <Button text={enterBtn} />
+                <a href="/" className="header-nav__link">{mainTitle}</a>
+                <a href="/" className="header-nav__link">Tournament</a>
+                <a href="/" className="header-nav__link">PokeCards</a>
+                <a href="/" className="header-nav__link">PokeAlbum</a>
+                <Button text = 'login' classBtn = {classBtn}/>
+                <Button text = 'signup' classBtn = {classBtn}/>
             </nav>
         </section>
     )
