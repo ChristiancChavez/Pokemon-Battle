@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 //styles
 import './Button.scss';
 
-const Button = ({ text, classBtn }) => (
-    <button className={`btn btn${classBtn}`}>{text}</button>
+const Button = ({ text, classBtn, hoverHomeBtn }) => (
+    <button className={`btn btn--${classBtn} ${hoverHomeBtn}`}>{text}</button>
 )
 
 Button.propTypes = {

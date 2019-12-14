@@ -10,7 +10,6 @@ import './Header.scss';
 
 const Header = ({ title }) => {
    const mainTitle = title.substring(1) || 'Home'; 
-   const classBtn = '--transparent';
 
     return (
         <section className="header">
@@ -23,8 +22,8 @@ const Header = ({ title }) => {
                 <a href="/" className="header-nav__link">Tournament</a>
                 <a href="/" className="header-nav__link">PokeCards</a>
                 <a href="/" className="header-nav__link">PokeAlbum</a>
-                <Button text = 'login' classBtn = {classBtn}/>
-                <Button text = 'signup' classBtn = {classBtn}/>
+                <Button text="login" classBtn="transparent" hoverHomeBtn="login"/>
+                <Button text="signup" classBtn="transparent" hoverHomeBtn="signup"/>
             </nav>
         </section>
     )

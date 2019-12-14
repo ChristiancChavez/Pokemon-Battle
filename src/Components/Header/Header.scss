@@ -2,7 +2,11 @@
 $size-image: 2.8em;
 $color-links: white;
 
-
+//mixins
+@mixin color-pokemon-font {
+    color: #FFCB05;
+    text-shadow: 4px 2px 0px rgb(39, 74, 126);
+}
 
 .header {
     display: grid;
@@ -16,8 +20,7 @@ $color-links: white;
             font-size: 3em;
             font-weight: 700;
             margin-right: 0.5em;
-            color: #FFCB05;
-            text-shadow: 4px 2px 0px rgb(39, 74, 126);
+            @include color-pokemon-font;
         }
         &__image {
             width: $size-image;
@@ -36,6 +39,10 @@ $color-links: white;
             font-size: 1.8em;
             text-shadow: 3px 2px 0px rgb(0, 0, 0);
             margin-right: 0.5em;
+            transition: all 0.5s;
+            &:hover {
+                @include color-pokemon-font;
+            }
         }
     }
 }
