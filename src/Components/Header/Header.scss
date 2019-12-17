@@ -5,7 +5,7 @@ $color-links: #ffffff;
 //mixins
 @mixin color-pokemon-font {
     color: #FFCB05;
-    text-shadow: 4px 2px 0px #274a7e;
+    text-shadow: 3px 2px 0px #274a7e;
 }
 
 .header {
@@ -32,7 +32,6 @@ $color-links: #ffffff;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        flex-flow: row nowrap;
         &__link {
             color: $color-links;
             text-decoration: none;
