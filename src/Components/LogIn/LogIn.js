@@ -20,12 +20,10 @@ class LogIn extends Component {
         const { username, pokename, email, password } = this.state;
         return(
             <article className="popup">
-                <i onClick={this.toggleButtonPopup}>
-                    {/* <FontAwesomeIcon icon={faTimesCircle}  size="6x" /> */}
-                    X
-                </i>
-                <form className="form"  >
+                
+                <form className="form" >
                     <h3>SIGNUP</h3>
+                    <span onClick={this.toggleButtonPopup}>X</span>
                     <input
                         name="username" 
                         placeholder="Name" 
