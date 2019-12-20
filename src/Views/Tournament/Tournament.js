@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 //Components
-import Header from '../Header/Header';
+import Header from '../../Components/Header';
 
 const Tournament = ({ location:{ pathname }}) => (
     <div>

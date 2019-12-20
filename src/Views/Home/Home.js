@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 //Components
-import Header from '../Header/Header';
+import Header from '../../Components/Header/Header';
+//styles
+import './Home.scss';
 
 const Home = ({ location:{ pathname } }) => ( 
-    <div>
+    <section className="home">
         <Header title={pathname} />
-    </div>
+    </section>
 )
 
 Home.protoTypes = {

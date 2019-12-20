@@ -1,33 +1,48 @@
 //variables
-$size-image-header: 7em;
-$size-image-menu: 5em;
-$size-user-icon: 10em;
+$size-image: 2.8em;
+$color-links: #ffffff;
+$font-component: 'pokemonSolid';
+
+//mixins
+@mixin color-pokemon-font {
+    color: #FFCB05;
+    text-shadow: 3px 2px 0px #274a7e;
+}
 
 .header {
     display: grid;
-    grid-template-columns: repeat(3, minmax(90px, 1fr));
-    justify-items: center;
+    grid-template-columns: repeat(2,50%);
     align-items: center;
-    text-align: center;
-    position: relative;
-    &__imageHeader {
-        width: $size-image-header;
-        height: $size-image-header;
-        cursor: pointer;
+    font-family: $font-component;
+    &-title {
+        display: flex;
+        align-items: center;
+        &__name {
+            font-size: 3.3em;
+            font-weight: 700;
+            margin-right: 0.5em;
+            @include color-pokemon-font;
+        }
+        &__image {
+            width: $size-image;
+            height: $size-image;
+            padding-bottom: 1.5em;
+        }
     }
-    &__imageHeader {
-        width: $size-image-header;
-        height: $size-image-header;
-        cursor: pointer;
-    }
-    &__title {
-        font-size: 6em;
-        color: black;
-        text-transform: capitalize;
-    }
-    &__imageMenu {
-        width: $size-image-menu;
-        height: $size-image-menu;
-        cursor: pointer;
+    &-nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        &__link {
+            color: $color-links;
+            text-decoration: none;
+            font-size: 1.8em;
+            text-shadow: 3px 2px 0px #000000;
+            margin-right: 0.5em;
+            transition: all 0.5s;
+            &:hover {
+                @include color-pokemon-font;
+            }
+        }
     }
 }

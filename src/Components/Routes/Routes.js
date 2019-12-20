@@ -3,8 +3,8 @@ import React from 'react';
 //Dependencies
 import { Switch, Route } from 'react-router-dom';
 //Components
-import Tournament from '../Tournament';
-import Home from '../Home';
+import Tournament from '../../Views/Tournament';
+import Home from '../../Views/Home';
 
 const Routes = () => (
     <Switch>
