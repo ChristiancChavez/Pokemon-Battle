@@ -1,6 +1,7 @@
 //variables
 $size-image: 2.8em;
 $color-links: #ffffff;
+$font-component: 'pokemonSolid';
 
 //mixins
 @mixin color-pokemon-font {
@@ -12,7 +13,7 @@ $color-links: #ffffff;
     display: grid;
     grid-template-columns: repeat(2,50%);
     align-items: center;
-    font-family: 'pokemonSolid';
+    font-family: $font-component;
     &-title {
         display: flex;
         align-items: center;

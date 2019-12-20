@@ -23,7 +23,7 @@ const Header = ({ title }) => {
                 <a href="/" className="header-nav__link">PokeCards</a>
                 <a href="/" className="header-nav__link">PokeAlbum</a>
                 <Button text="login" classBtn="transparent"/>
-                <Button text="signup" classBtn="blue" h/>
+                <Button text="signup" classBtn="blue"/>
             </nav>
         </section>
     )
