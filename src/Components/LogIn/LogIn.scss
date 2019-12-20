@@ -1,33 +1,27 @@
 //variables
 $color-font:#000000;
-$background-modal: #3a3636;
-$color-title: #ffffff;
 
 .popup {
     display: grid;
-    grid-template-rows: repeat(2, 10%) 1fr;
+    grid-template-rows: 1fr;
     justify-items: center;
     align-items: flex-end;
-    background: $background-modal;
+    background: rgba(0, 0, 0, 0.692);
     text-align: center;
     width: 100vw;
     height: 100vh;
     position: absolute;
+    left: 0;
+    top: 0;
     z-index: 2; 
-    & > h2 ,h3 {
-        font-size: 3em;
-        color:$color-title;
-        align-self: center;
-    }
-    & > h3 {
-        font-size: 1.8em;
-    }
+    padding-top: 1rem;
+    
     & > i {
-        font-size: 0.5em;
+        font-size: 5rem;
         color: #8f0505;
         position: absolute;
-        right: 6em;
-        top: 3em;
+        right: 3rem;
+        top: 1rem;
         cursor: pointer;
         &:hover {
             color: rgb(184, 77, 77);
@@ -40,56 +34,65 @@ $color-title: #ffffff;
     align-self: flex-start;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    margin-top: 1%;
-    height: 470px;
-    width: 520px;
-    background: linear-gradient(180deg, #fe0000 48%, #000000 50%, #fcfcfc 56%);
+    height: 37rem;
+    width: 38rem;
+    background: linear-gradient(180deg, #fe0000 50%, #000000 57%, #fcfcfc 63%);
     color: $color-font;
-    font-size: 1.5em;
     text-align: center;
     border-radius: 50%;
-    box-shadow: inset  -50px -10px 40px -15px #000000;
+    box-shadow: inset  -50px -10px 50px -20px #000000;
     border: 5px solid #000000;
     position: relative;
+    & > h3 {
+        font-family: 'pokemonSolid';
+        color: #FFCB05;
+        font-size: 1.5rem;
+        align-self: center;
+        text-shadow: 3px 2px 0px #274a7e;
+    }
     &::before {
         content: '';
         position: absolute;
         border-radius: 50%;
-        width: 130px;
-        height: 100px;
+        width: 8rem;
+        height: 6rem;
         background: #ffffffde;
-        top: 1.7em;
-        left: 2.9em;
+        top: 4rem;
+        left: 4.7rem;
         transform: rotateZ(160deg);
     }
     &::after {
         content: '';
         position: absolute;
         border-radius: 50%;
-        width: 400px;
-        height: 20px;
-        bottom: -0.6em;
-        right: -6em;
+        width: 23rem;
+        height: 1rem;
+        bottom: -0.7rem;
+        right: -3rem;
         background: rgba(0, 0, 0, 0.856);
-        box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.856);
+        box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.74);
         filter: opacity(60%);
         transform: rotateX(299deg);
     }
     & input {
+        font-family: 'pokemonSolid';
         text-align: center;
         font-weight: 700;
-        padding: 0.5em;
+        padding: 0.5rem;
         width: 50%;
         border: none;
-        background: transparent;
+        background: rgba(255, 255, 255, 0.301);
         outline: none;
+        font-size: 1.1rem;
+        margin: 1.8rem 0;
         &::placeholder {
             color: $color-font;
         }
         &:focus {
             background: rgba(255, 255, 255, 0.301);
+            border-radius: 1rem;
         }
     }
     &__button {
