@@ -1,12 +1,19 @@
 //variables
 $color-font:#000000;
-$background-input: rgba(255, 255, 255, 0.171);
-$size-close-btn: 2em;
-$width-update-btn: 6rem;
-$height-update-btn: 10rem;
-$hover-update-btn: rgb(197, 197, 197);
+$background-form: #ffffff;
+$font-close-btn: 1rem;
+$position-close-btn: 0.5rem;
+$size-update-btn: 6rem;
+$background-update-btn: #ffffff;
+$background-hover-update-btn: #c2bebe;
 $none-value: none;
 $font-family-solid: 'pokemonSolid';
+
+//mixins
+@mixin color-pokemon-font {
+    color: #FFCB05;
+    text-shadow: 3px 2px 0px #274a7e;
+}
 
 .popup {
     display: grid;
@@ -21,54 +28,30 @@ $font-family-solid: 'pokemonSolid';
     left: 0;
     top: 0;
     z-index: 2; 
-    padding-top: 1rem;
     font-family: $font-family-solid;
 } 
 
-.form {
-    align-self: flex-start;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.pokeball {
     height: 37rem;
     width: 38rem;
-    background: linear-gradient(180deg, #fe0000 50%, #000000 57%, #fcfcfc 63%);
-    color: $color-font;
-    text-align: center;
+    background: linear-gradient(180deg, #fe0000 53%, #000000 57%, #fcfcfc 63%);
     border-radius: 50%;
     box-shadow: inset  -50px -10px 50px -20px #000000;
     border: 5px solid #000000;
     position: relative;
-    & > h3 {
-        font-family: 'pokemonSolid';
-        color: #FFCB05;
-        font-size: 1.5rem;
-        align-self: center;
-        text-shadow: 3px 2px 0px #274a7e;
-    }
-    & > span {
-        font-size: $size-close-btn;
-        color: #000000;
-        position: absolute;
-        right: 6rem;
-        top: 1rem;
-        cursor: pointer;
-        &:hover {
-            color: green;
-            transform: scale(1.5);
-        }
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
     &::before {
         content: '';
         position: absolute;
         border-radius: 50%;
-        width: 6rem;
-        height: 4rem;
+        width: 5.5rem;
+        height: 3.5rem;
         background: #ffffffde;
-        top: 5rem;
-        left: 4rem;
-        transform: rotateZ(140deg);
+        top: 2.3rem;
+        left: 8rem;
+        transform: rotateZ(160deg);
     }
     &::after {
         content: '';
@@ -82,39 +65,74 @@ $font-family-solid: 'pokemonSolid';
         filter: opacity(60%);
         transform: rotateX(299deg);
     }
+
+}
+
+.form {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    color: $color-font;
+    text-align: center;
+    background: $background-form;
+    border-radius: 0.5rem;
+    width: 60%;
+    padding: 0.5rem;
+    & > h3 {
+        font-family: 'pokemonSolid';
+        @include color-pokemon-font;
+        font-size: 1.5rem;
+        align-self: center;
+    }
+    &__close {
+        font-size: $font-close-btn;
+        @include color-pokemon-font;
+        position: absolute;
+        right: $position-close-btn;
+        top: $position-close-btn;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.5);
+        }
+    }
+    
     & input {
         font-family: $font-family-solid;
         text-align: center;
         font-weight: 700;
         padding: 0.5rem;
-        width: 17rem;
+        width: 85%;
         border: $none-value;
-        background: $background-input;
+        background: transparent;
         outline: $none-value;
-        font-size: 1.1rem;
+        font-size: 1rem;
         border-radius: 1rem;
-        margin: 1.8rem 0;
+        margin: 0.5rem 0;
         &::placeholder {
             color: $color-font;
         }
-        &:focus {
-            background: $background-input;
-            border-radius: 1rem;
-        }
     }
     &__button {
-        border-radius: 50%;
-        border: 10px double #000000;
+        font-family: $font-family-solid;
+        border-radius: 0.5rem;
+        border: 1px solid #FFCB05;
         text-align: center;
-        font-weight: 700;
-        color: #000000;
-        padding: 10px 20px;
+        color: #cecece;
+        padding: 0.5rem 1rem;
         cursor: pointer;
-        background: #ffffff;
-        width: $width-update-btn;
-        height: $height-update-btn;
+        background: $background-update-btn;
+        font-size: 1.1rem;
         &:hover {
-            background: $hover-update-btn;
+            background: $background-hover-update-btn;
+            color: white;
         }
+    }
+    &__social {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 1rem;
     }
 }

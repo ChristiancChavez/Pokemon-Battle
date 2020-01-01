@@ -3,18 +3,20 @@ $border-color-white: #ffffff;
 $blue: #274a7e;
 $gray: #6d6d6d;
 $font-family: 'pokemonSolid';
+$color: black;
 
 .btn {
     text-align: center;
-    border-radius: 0.2em;
+    border-radius: 0.2rem;
     align-self: flex-start;
     font-family: $font-family;
     cursor: pointer;
-    font-size: 1.8em;
-    padding: 0.3em 1.2em;
+    font-size: 1.8rem;
+    padding: 0.3em 1.2rem;
     text-shadow: 3px 2px 1px #000000;
     transition: all 0.5s;
     text-transform: capitalize;
+    border: none;
     &--transparent {
         color: $border-color-white;
         border: $border-color-white 1px solid;
@@ -34,5 +36,23 @@ $font-family: 'pokemonSolid';
             border: $border-color-white 1px solid;
         }
     }
-    
+    &--facebook {
+        background: #3966aa;
+        color: $color;
+        font-size: 1rem;
+        text-shadow: 3px 2px 1px #ffffff;
+        margin-right: 1rem;
+        &:hover {
+            background: #244470;
+        }
+    }
+    &--google {
+        background: #838383;
+        color: $color;
+        font-size: 1rem;
+        text-shadow: 3px 2px 1px #ffffff;
+        &:hover {
+            background: #575757;
+        }
+    }
 }
