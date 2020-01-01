@@ -1,9 +1,9 @@
 //variables
 $color-font:#000000;
 $background-form: #ffffff;
-$font-close-btn: 1rem;
-$position-close-btn: 0.5rem;
-$size-update-btn: 6rem;
+$font-close-btn: 1.5em;
+$position-close-btn: 1em;
+$size-update-btn: 1.5em;
 $background-update-btn: #ffffff;
 $background-hover-update-btn: #c2bebe;
 $none-value: none;
@@ -32,8 +32,8 @@ $font-family-solid: 'pokemonSolid';
 } 
 
 .pokeball {
-    height: 37rem;
-    width: 38rem;
+    height: 60em;
+    width: 59em;
     background: linear-gradient(180deg, #fe0000 53%, #000000 57%, #fcfcfc 63%);
     border-radius: 50%;
     box-shadow: inset  -50px -10px 50px -20px #000000;
@@ -46,21 +46,21 @@ $font-family-solid: 'pokemonSolid';
         content: '';
         position: absolute;
         border-radius: 50%;
-        width: 5.5rem;
-        height: 3.5rem;
+        width: 9em;
+        height: 6em;
         background: #ffffffde;
-        top: 2.3rem;
-        left: 8rem;
-        transform: rotateZ(160deg);
+        top: 4em;
+        left: 12em;
+        transform: rotateZ(150deg);
     }
     &::after {
         content: '';
         position: absolute;
         border-radius: 50%;
-        width: 23rem;
-        height: 1rem;
-        bottom: -0.5rem;
-        right: -3rem;
+        width: 40em;
+        height: 1em;
+        bottom: -0.5em;
+        right: -7em;
         background: rgba(77, 77, 77, 0.856);
         filter: opacity(60%);
         transform: rotateX(299deg);
@@ -77,13 +77,13 @@ $font-family-solid: 'pokemonSolid';
     color: $color-font;
     text-align: center;
     background: $background-form;
-    border-radius: 0.5rem;
+    border-radius: 0.5em;
     width: 60%;
-    padding: 0.5rem;
+    padding: 1em;
     & > h3 {
         font-family: 'pokemonSolid';
         @include color-pokemon-font;
-        font-size: 1.5rem;
+        font-size: 2em;
         align-self: center;
     }
     &__close {
@@ -102,28 +102,28 @@ $font-family-solid: 'pokemonSolid';
         font-family: $font-family-solid;
         text-align: center;
         font-weight: 700;
-        padding: 0.5rem;
+        padding: 0.5em;
         width: 85%;
         border: $none-value;
         background: transparent;
         outline: $none-value;
-        font-size: 1rem;
-        border-radius: 1rem;
-        margin: 0.5rem 0;
+        font-size: 1.5em;
+        border-radius: 1em;
+        margin: 0.7em 0;
         &::placeholder {
             color: $color-font;
         }
     }
     &__button {
         font-family: $font-family-solid;
-        border-radius: 0.5rem;
+        border-radius: 0.5em;
         border: 1px solid #FFCB05;
         text-align: center;
         color: #cecece;
-        padding: 0.5rem 1rem;
+        padding: 0.1em 1em;
         cursor: pointer;
         background: $background-update-btn;
-        font-size: 1.1rem;
+        font-size: 2em;
         &:hover {
             background: $background-hover-update-btn;
             color: white;
@@ -133,6 +133,6 @@ $font-family-solid: 'pokemonSolid';
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        margin-top: 1rem;
+        margin-top: 2em;
     }
 }
