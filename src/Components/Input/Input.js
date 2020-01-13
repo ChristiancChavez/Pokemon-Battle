@@ -1,16 +1,18 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+//styles
+import './Input.scss';
 
 const Input = ({ label }) => (
-    <Fragment>
+    <div className="info">
         <label>{label}</label>
         <input
             type="text"  
             // pattern="[a-z0-9]{2,15}" 
             // title="Your username must be contain one number at least and be 8 to 12 in length" 
             required
-            onChange={this.onChange} 
+            // onChange={this.onChange} 
         />
-    </Fragment>
+    </div>
 )
 
 export default Input;

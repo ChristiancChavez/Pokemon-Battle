@@ -1,0 +1,123 @@
+//variables
+$color-font:#000000;
+$background-form: #ffffffc5;
+$font-close-btn: 1.5em;
+$position-close-btn: 1em;
+$size-update-btn: 1.5em;
+$background-update-btn: #ffffff;
+$background-hover-update-btn: #c2bebe;
+$none-value: none;
+$font-family-solid: 'pokemonSolid';
+
+//mixins
+@mixin color-pokemon-font {
+    color: #FFCB05;
+    text-shadow: 3px 2px 0px #274a7e;
+}
+
+.authentication {
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.801);
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2; 
+    font-family: $font-family-solid;
+    &__pokeball {
+        height: 60em;
+        width: 59em;
+        background: linear-gradient(180deg, #fe0000 53%, #000000 57%, #fcfcfc 63%);
+        border-radius: 50%;
+        box-shadow: inset  -50px -10px 50px -20px #000000;
+        border: 5px solid #000000;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &::before {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            width: 9em;
+            height: 6em;
+            background: #ffffffde;
+            top: 4em;
+            left: 12em;
+            transform: rotateZ(150deg);
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            width: 40em;
+            height: 1em;
+            bottom: -0.5em;
+            right: -7em;
+            background: rgba(77, 77, 77, 0.856);
+            filter: opacity(60%);
+            transform: rotateX(299deg);
+        }
+    
+    }
+    .form {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content:space-around;
+        align-items: center;
+        color: $color-font;
+        text-align: start;
+        background: $background-form;
+        border-radius: 0.5em;
+        width: 70%;
+        padding: 0.5em;
+        & > h3 {
+            font-family: 'pokemonSolid';
+            @include color-pokemon-font;
+            font-size: 1.5rem;
+            align-self: center;
+        }
+        &__close {
+            font-size: $font-close-btn;
+            @include color-pokemon-font;
+            position: absolute;
+            right: $position-close-btn;
+            top: $position-close-btn;
+            cursor: pointer;
+            &:hover {
+                transform: scale(1.5);
+            }
+        }
+        
+        
+        &__button {
+            font-family: $font-family-solid;
+            border-radius: 0.5em;
+            border: 1px solid #FFCB05;
+            text-align: center;
+            color: #cecece;
+            padding: 0.1em 1em;
+            cursor: pointer;
+            background: $background-update-btn;
+            font-size: 2em;
+            &:hover {
+                background: $background-hover-update-btn;
+                color: white;
+            }
+        }
+        &__social {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-top: 2em;
+        }
+    }
+    
+} 
+
+
+
