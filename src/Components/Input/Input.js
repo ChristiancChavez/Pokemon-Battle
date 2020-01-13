@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 
-const Input = ({ name }) => (
+const Input = ({ label }) => (
     <Fragment>
-        <label>{name}</label>
+        <label>{label}</label>
         <input
             type="text"  
             // pattern="[a-z0-9]{2,15}" 
