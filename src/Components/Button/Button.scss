@@ -2,7 +2,9 @@
 $border-color-white: #ffffff;
 $blue: #274a7e;
 $gray: #6d6d6d;
+$yellow: #FFCB05;
 $font-family: 'pokemonSolid';
+$background-update-yellow: #FFCB05;
 
 .btn {
     text-align: center;
@@ -32,6 +34,35 @@ $font-family: 'pokemonSolid';
             background: $blue;
             color: $border-color-white;
             border: $border-color-white 1px solid;
+        }
+    }
+    &--yellow {
+        border: 1px solid $yellow;
+        color: $yellow;
+        align-self: center;
+        text-shadow: 3px 2px 1px $blue;
+        &:hover {
+            background: $background-update-yellow;
+            color: white;
+        }
+    }
+    &--facebook {
+        border: 1px solid #3b5998;
+        background: #3b5998;
+        color: #8b9dc3;
+        margin-right: 1rem;
+        &:hover {
+            background: #8ba6f0;
+            color: white;
+        }
+    }
+    &--google {
+        border: 1px solid #db4437;
+        background: #db4437;
+        color: #a7a2a2;
+        &:hover {
+            background: #df7c73;
+            color: white;
         }
     }
     

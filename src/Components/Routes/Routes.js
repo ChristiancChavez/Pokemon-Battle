@@ -4,7 +4,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 //Components
 import Tournament from '../../Views/Tournament';
-import Home from '../../Views/Home';
+import Home from '../../Views/Home/Index';
 
 const Routes = () => (
     <Switch>

@@ -28,8 +28,8 @@ $font-family-solid: 'pokemonSolid';
     z-index: 2; 
     font-family: $font-family-solid;
     &__pokeball {
-        height: 60em;
-        width: 59em;
+        height: 61.5em;
+        width: 60.5em;
         background: linear-gradient(180deg, #fe0000 53%, #000000 57%, #fcfcfc 63%);
         border-radius: 50%;
         box-shadow: inset  -50px -10px 50px -20px #000000;
@@ -42,12 +42,12 @@ $font-family-solid: 'pokemonSolid';
             content: '';
             position: absolute;
             border-radius: 50%;
-            width: 9em;
-            height: 6em;
+            width: 8em;
+            height: 5em;
             background: #ffffffde;
-            top: 4em;
-            left: 12em;
-            transform: rotateZ(150deg);
+            top: 10em;
+            left: 5.5em;
+            transform: rotateZ(140deg);
         }
         &::after {
             content: '';
@@ -73,8 +73,8 @@ $font-family-solid: 'pokemonSolid';
         text-align: start;
         background: $background-form;
         border-radius: 0.5em;
-        width: 70%;
-        padding: 0.5em;
+        width: 50%;
+        padding: 1em;
         & > h3 {
             font-family: 'pokemonSolid';
             @include color-pokemon-font;
@@ -92,23 +92,6 @@ $font-family-solid: 'pokemonSolid';
                 transform: scale(1.5);
             }
         }
-        
-        
-        &__button {
-            font-family: $font-family-solid;
-            border-radius: 0.5em;
-            border: 1px solid #FFCB05;
-            text-align: center;
-            color: #cecece;
-            padding: 0.1em 1em;
-            cursor: pointer;
-            background: $background-update-btn;
-            font-size: 2em;
-            &:hover {
-                background: $background-hover-update-btn;
-                color: white;
-            }
-        }
         &__social {
             display: flex;
             flex-direction: row;
@@ -116,7 +99,6 @@ $font-family-solid: 'pokemonSolid';
             margin-top: 2em;
         }
     }
-    
 } 
 
 

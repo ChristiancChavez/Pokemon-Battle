@@ -5,6 +5,7 @@ $background-input: #ffffff;
 $none-value: none;
 $font-family-solid: 'pokemonSolid';
 $font-size: 0.9rem;
+$box-shadow: #FFCB05;
 
 .info {
     display: flex;
@@ -30,7 +31,7 @@ $font-size: 0.9rem;
             color: $color-font;
         }
         &:hover {
-            box-shadow: 1px 1px 10px 1px #fe0000;
+            box-shadow: 1px 1px 10px 1px $box-shadow;
         }
     }
 }
