@@ -16,10 +16,10 @@ class Authentication extends Component {
                         <Input label='Pokename'/>
                         <Input label='E-mail'/>
                         <Input label='Password'/>
-                        <Button text={'title'} classBtn="yellow" />
+                        <Button classBtn="yellow" >title</Button>
                         <div className="form__social">
-                            <Button text="Facebook" classBtn="facebook" />
-                            <Button text="Google" classBtn="google" />
+                            <Button classBtn="facebook" >Facebook</Button>
+                            <Button classBtn="google" >Google</Button>
                         </div>
                     </form>
                 </div>

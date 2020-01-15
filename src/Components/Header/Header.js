@@ -22,8 +22,8 @@ const Header = ({ title }) => {
                 <a href="/" className="header-nav__link">Tournament</a>
                 <a href="/" className="header-nav__link">PokeCards</a>
                 <a href="/" className="header-nav__link">PokeAlbum</a>
-                <Button text="login" classBtn="transparent"/>
-                <Button text="signup" classBtn="blue"/>
+                <Button classBtn="transparent">login</Button>
+                <Button classBtn="blue">signup</Button>
             </nav>
         </section>
     )
