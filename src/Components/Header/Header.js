@@ -8,7 +8,7 @@ import pokeball from '../../Assets/images/pokeball.png';
 import './Header.scss';
 
 
-const Header = ({ title }) => {
+const Header = ({ title, handleIndentification }) => {
    const mainTitle = title.substring(1) || 'Home'; 
 
     return (
@@ -22,8 +22,8 @@ const Header = ({ title }) => {
                 <a href="/" className="header-nav__link">Tournament</a>
                 <a href="/" className="header-nav__link">PokeCards</a>
                 <a href="/" className="header-nav__link">PokeAlbum</a>
-                <Button classBtn="transparent">login</Button>
-                <Button classBtn="blue">signup</Button>
+                <Button classBtn="transparent" onClick={() => handleIndentification('Login')}>login</Button>
+                <Button classBtn="blue" onClick={() => handleIndentification('Signup')}>signup</Button>
             </nav>
         </section>
     )
