@@ -5,6 +5,14 @@ $gray: #6d6d6d;
 $yellow: #FFCB05;
 $font-family: 'pokemonSolid';
 $background-update-yellow: #FFCB05;
+$font-close-btn: 1.5em;
+$position-close-btn: 1em;
+
+//mixins
+@mixin color-pokemon-font {
+    color: #FFCB05;
+    text-shadow: 3px 2px 0px #274a7e;
+}
 
 .btn {
     text-align: center;
@@ -49,7 +57,7 @@ $background-update-yellow: #FFCB05;
     &--facebook {
         border: 1px solid #3b5998;
         background: #3b5998;
-        color: #686666;
+        color: #7e7a7a;
         margin-right: 1rem;
         &:hover {
             background: #8ba6f0;
@@ -59,10 +67,22 @@ $background-update-yellow: #FFCB05;
     &--google {
         border: 1px solid #db4437;
         background: #db4437;
-        color: #686666;
+        color: #7e7a7a;
         &:hover {
             background: #df7c73;
             color: white;
+        }
+    }
+    &--close-authentication {
+        border: none;
+        background: transparent;
+        font-size: $font-close-btn;
+        @include color-pokemon-font;
+        position: absolute;
+        right: $position-close-btn;
+        top: $position-close-btn;
+        &:hover {
+            transform: scale(1.5);
         }
     }
     

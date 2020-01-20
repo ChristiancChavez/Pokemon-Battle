@@ -27,14 +27,28 @@ class Home extends Component {
         })
         console.log(title);
     };
+
+    handleCloseIdentification = () => {
+        this.setState({
+            showAuthentication: false,
+        })
+    }
     render() { 
         const { location:{ pathname } } = this.props;
         const { showAuthentication, identification } = this.state;
 
         return (         
             <section className="home">
-                <Header title={pathname} handleIndentification={this.handleIndentification} />
-                {showAuthentication && <Authentication identification={identification} />}
+                <Header 
+                    title={pathname} 
+                    handleIndentification={this.handleIndentification} 
+                />
+                {showAuthentication && 
+                    <Authentication 
+                        identification={identification} 
+                        handleCloseIdentification={this.handleCloseIdentification} 
+                    />
+                }
             </section>
         )
     }
