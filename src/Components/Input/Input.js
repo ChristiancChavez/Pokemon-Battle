@@ -1,9 +1,9 @@
 import React from 'react';
 //styles
-import './Input.scss';
+import './input.scss';
 
 const Input = ({ label }) => (
-    <div className="info">
+    <div className="input">
         <label>{label}</label>
         <input
             type="text"  

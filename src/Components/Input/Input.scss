@@ -7,16 +7,16 @@ $font-family-solid: 'pokemonSolid';
 $font-size: 0.9rem;
 $box-shadow: #FFCB05;
 
-.info {
+.input {
     display: flex;
     justify-content: space-around;
     flex-flow: column;
     font-family: $font-family-solid;
-    & label {
+    label {
         color:$color-label;
         font-size: $font-size;
     }
-    & input { 
+    input { 
         font-family: $font-family-solid;
         text-align: start;
         font-weight: 700;
