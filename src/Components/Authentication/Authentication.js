@@ -9,7 +9,6 @@ class Authentication extends Component {
     render(){
         const { identification, handleCloseIdentification } = this.props;
         const userSignUp = identification === 'Signup'? false : true;
-        console.log(identification);
         return (
             <div className="authentication">
                 <div className="authentication__pokeball">
