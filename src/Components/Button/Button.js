@@ -3,12 +3,10 @@ import PropTypes from 'prop-types';
 //styles
 import './Button.scss';
 
-const Button = ({ text, classBtn }) => (
-    <button className={`btn btn--${classBtn}`}>{text}</button>
-)
+const Button = ({ classBtn, ...other }) => <button className={`btn btn--${classBtn}`} {...other} />
+
 
 Button.propTypes = {
-    text : PropTypes.string.isRequired,
     classBtn : PropTypes.string.isRequired,
 }
 
