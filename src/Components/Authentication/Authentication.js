@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React,{ Component } from 'react';
 //Components
 import Input from '../Input';
 import Button from '../Button';
@@ -28,7 +28,6 @@ class Authentication extends Component {
             </div>
         )
     }
-
 }
 
 export default Authentication;
