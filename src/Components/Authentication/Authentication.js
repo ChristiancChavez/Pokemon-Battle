@@ -15,7 +15,7 @@ class Authentication extends Component {
                     <form className="form">
                         <h3>{identification}</h3>
                         <Button classBtn="close-authentication" onClick={handleCloseIdentification}>X</Button>
-                        <Input label='Pokename'/>
+                        <Input label='Pokename' />
                         {userSignUp && <Input label='E-mail'/>}
                         <Input label='Password'/>
                         <Button classBtn="yellow" onClick={handleCloseIdentification}>{identification}</Button>
