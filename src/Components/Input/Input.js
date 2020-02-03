@@ -1,6 +1,6 @@
 import React from 'react';
 //styles
-import './input.scss';
+import './Input.scss';
 
 const Input = ({ label }) => (
     <div className="input">

@@ -35,7 +35,7 @@ $position-close-btn: 1em;
         }
     }
     &--blue {
-        background: white;
+        background: #ffffff;
         color: $blue;
         border: $blue 1px solid ;
         &:hover {
@@ -51,26 +51,26 @@ $position-close-btn: 1em;
         text-shadow: 3px 2px 1px $blue;
         &:hover {
             background: $background-update-yellow;
-            color: white;
+            color: #ffffff;
         }
     }
     &--facebook {
         border: 1px solid #3b5998;
         background: #3b5998;
-        color: #7e7a7a;
+        color: #ffffff;
         margin-right: 1rem;
         &:hover {
             background: #8ba6f0;
-            color: white;
+            color: #7e7a7a;
         }
     }
     &--google {
         border: 1px solid #db4437;
         background: #db4437;
-        color: #7e7a7a;
+        color: #ffffff;
         &:hover {
             background: #df7c73;
-            color: white;
+            color: #7e7a7a;
         }
     }
     &--close-authentication {
