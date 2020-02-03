@@ -5,23 +5,26 @@ import Button from '../Button';
 //styles
 import './Authentication.scss';
 
-const Authentication  = () => (
-    <div className="authentication">
-        <div className="authentication__pokeball">
-            <form className="form">
-                <h3>{'title'}</h3>
-                <span className="form__close">X</span>
-                <Input label='Pokename'/>
-                <Input label='E-mail'/>
-                <Input label='Password'/>
-                <Button classBtn="yellow">title</Button>
-                <div className="form__social">
-                    <Button classBtn="facebook">Facebook</Button>
-                    <Button classBtn="google">Google</Button>
-                </div>
-            </form>
+const Authentication = ({ identification, handleCloseIdentification } ) => {
+    const userSignUp = identification === 'Signup'? false : true;
+    return (
+        <div className="authentication">
+            <div className="authentication__pokeball">
+                <form className="form">
+                    <h3>{identification}</h3>
+                    <Button classBtn="close-authentication" onClick={handleCloseIdentification}>X</Button>
+                    <Input label='Pokename' />
+                    {userSignUp && <Input label='E-mail'/>}
+                    <Input label='Password'/>
+                    <Button classBtn="yellow" onClick={handleCloseIdentification}>{identification}</Button>
+                    <div className="form__social">
+                        <Button classBtn="facebook">Facebook</Button>
+                        <Button classBtn="google">Google</Button>
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
-)
+    )
+}
 
 export default Authentication;

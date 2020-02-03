@@ -1,8 +1,6 @@
 //variables
 $color-font:#000000;
 $background-form: #ffffffc5;
-$font-close-btn: 1.5em;
-$position-close-btn: 1em;
 $size-update-btn: 1.5em;
 $background-update-btn: #ffffff;
 $background-hover-update-btn: #c2bebe;
@@ -81,17 +79,7 @@ $font-family-solid: 'pokemonSolid';
             font-size: 1.5rem;
             align-self: center;
         }
-        &__close {
-            font-size: $font-close-btn;
-            @include color-pokemon-font;
-            position: absolute;
-            right: $position-close-btn;
-            top: $position-close-btn;
-            cursor: pointer;
-            &:hover {
-                transform: scale(1.5);
-            }
-        }
+        
         &__social {
             display: flex;
             flex-direction: row;
