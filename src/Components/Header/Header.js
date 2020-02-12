@@ -22,8 +22,8 @@ const Header = ({ title, handleIndentification }) => {
                 <a href="/" className="header-nav__link">Tournament</a>
                 <a href="/" className="header-nav__link">PokeCards</a>
                 <a href="/" className="header-nav__link">PokeAlbum</a>
-                <Button classBtn="transparent" onClick={() => handleIndentification('Login')}>login</Button>
-                <Button classBtn="blue" onClick={() => handleIndentification('Signup')}>signup</Button>
+                <Button classBtn="transparent" onClick={() => handleIndentification('login')}>login</Button>
+                <Button classBtn="blue" onClick={() => handleIndentification('signup')}>signup</Button>
             </nav>
         </section>
     )

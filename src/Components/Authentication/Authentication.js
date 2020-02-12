@@ -7,11 +7,13 @@ import './Authentication.scss';
 
 const Authentication = ({ handleChange, identification, handleCloseIdentification, addUserAuthenticationDataBase, getUserAuthenticationDataBase, password, pokename, email })=> {
    
-    const userSignUp = identification === 'Signup'? false : true;
+    const userSignUp = identification === 'signup'? false : true;
+    const onSubmitFunc = identification === 'login' ? addUserAuthenticationDataBase : getUserAuthenticationDataBase;
+    console.log(identification);
     return (
         <div className="authentication">
             <div className="authentication__pokeball">
-                <form className="form" onSubmit={ event => addUserAuthenticationDataBase(event)}>
+                <form className="form" onSubmit={onSubmitFunc}>
                     <h3>{identification}</h3>
                     <Button classBtn="close-authentication" onClick={handleCloseIdentification}>X</Button>
                     <Input 
