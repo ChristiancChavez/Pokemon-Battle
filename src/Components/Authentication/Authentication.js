@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 //Components
 import Input from '../Input';
 import Button from '../Button';
+import Error from '../Error-Input';
 //styles
 import './Authentication.scss';
 
-const Authentication = ({ handleChange, identification, handleCloseIdentification, addUserAuthenticationDataBase, getUserAuthenticationDataBase, password, pokename, email })=> {
+const Authentication = ({ handleChange, identification, handleCloseIdentification, addUserAuthenticationDataBase, getUserAuthenticationDataBase, password, pokename, email, errorPokename, errorEmail, errorPassword })=> {
    
     const userSignUp = identification === 'signup'? false : true;
     const onSubmitFunc = identification === 'login' ? addUserAuthenticationDataBase : getUserAuthenticationDataBase;
-    console.log(identification);
     return (
         <div className="authentication">
             <div className="authentication__pokeball">
@@ -25,16 +25,24 @@ const Authentication = ({ handleChange, identification, handleCloseIdentificatio
                         title='Your username must be contain one number at least and be 4 to 6 in length' 
                         onChange={event => handleChange('pokename', event.target.value)}
                     />
+                    {errorPokename && 
+                        <Error name={pokename} />
+                    }
                     {userSignUp && 
-                        <Input 
-                            label='E-mail' 
-                            type='email'
-                            name='email' 
-                            value={email}
-                            title='Your e-mail must be in the following order: characters@characters.domain'
-                            pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$' 
-                            onChange={event => handleChange('email', event.target.value)}
-                        />
+                        <Fragment>
+                            <Input 
+                                label='E-mail' 
+                                type='email'
+                                name='email' 
+                                value={email}
+                                title='Your e-mail must be in the following order: characters@characters.domain'
+                                pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$' 
+                                onChange={event => handleChange('email', event.target.value)}
+                            />
+                            {errorEmail && 
+                                <Error  name={email} />
+                            }
+                        </Fragment>
                     }
                     <Input 
                         label='Password' 
@@ -45,6 +53,9 @@ const Authentication = ({ handleChange, identification, handleCloseIdentificatio
                         title='Your password must be contain one number at least and be 8 to 15 in length' 
                         onChange={event => handleChange('password', event.target.value)}
                     />
+                    {errorPassword && 
+                        <Error  name={password}/>
+                    }
                     <Button classBtn="yellow"  type="submit">{identification}</Button>
                     <div className="form__social">
                         <Button classBtn="facebook">Facebook</Button>

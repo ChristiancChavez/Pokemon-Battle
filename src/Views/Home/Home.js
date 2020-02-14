@@ -5,14 +5,6 @@ import Header from '../../Components/Header';
 import Authentication from '../../Components/Authentication';
 //styles
 import './Home.scss';
-
-// const Home = ({ location:{ pathname } }) => ( 
-//     <section className="home">
-//         <Header title={pathname} />
-//         <Authentication />
-//     </section>
-// )
-
 class Home extends Component { 
 
     state = {
@@ -23,8 +15,15 @@ class Home extends Component {
         pokename: '',
         email: '',
         passwoord: '',
-        getUser: {}
+        getUser: {},
+        errorPokename: false,
+        errorEmail: false,
+        errorPassword: false
     }
+
+    componentDidMount = () => {
+        localStorage.setItem('updatedUsers', JSON.stringify(this.state.users));
+    };
     
     handleChange = (name, value) => {
         this.setState({
@@ -37,7 +36,6 @@ class Home extends Component {
             identification: title,
             showAuthentication: true,
         })
-        
     };
 
     handleCloseIdentification = () => {
@@ -48,45 +46,98 @@ class Home extends Component {
 
     addUserAuthenticationDataBase = (event) => {
         event.preventDefault();
-        localStorage.setItem('users', JSON.stringify(this.state.users));
+
         const { email, password, pokename } = this.state;
-        const retrievedUsers = JSON.parse(localStorage.getItem('users'));
-
-        const user = {
-            pokename,
-            password,
-            email
-        };
-
-        retrievedUsers.push(user);
-
-        localStorage.setItem('updatedUsers', JSON.stringify(retrievedUsers));
+        const retrievedUsers = JSON.parse(localStorage.getItem('updatedUsers'));
+        let user;
+        console.log(retrievedUsers.length, 'retrievedusers');
         
-        this.setState({
-            users: [...this.state.users, user],
-        })
+        if(retrievedUsers.length === 0){
+            user = {
+                pokename,
+                email,
+                password
+            };
+
+            retrievedUsers.push(user);
+
+            console.log(retrievedUsers);
+
+            // localStorage.setItem('updatedUsers', JSON.stringify(retrievedUsers));
+        
+            this.setState({
+                users: [...this.state.users, user],
+            })
+        } else {
+            retrievedUsers.forEach((userGetted) => {
+            
+                if(userGetted.pokename === pokename){
+                    this.setState({
+                        errorPokename: true
+                    })
+                    
+                } else {
+                    this.setState({
+                        errorPokename: false
+                    })
+                    user = {
+                        pokename,
+                    };
+                }
+
+                if(userGetted.email === email){
+                    this.setState({
+                        errorEmail: true
+                    })
+                } else {
+                    this.setState({
+                        errorEmail: false
+                    })
+                    user = {
+                        email,
+                    };
+                }
+                if(userGetted.password === password){
+                    this.setState({
+                        errorPassword: true
+                    })
+                } else {
+                    this.setState({
+                        errorPassword: false
+                    })
+                    user = {
+                        password,
+                    };
+                
+                retrievedUsers.push(user);
+        
+                this.setState({
+                    users: [...this.state.users, user],
+                })
+                localStorage.setItem('updatedUsers', JSON.stringify(retrievedUsers));
+            })
+        }
+       
         // this.handleCloseIdentification();
-        
-        console.log('hello add');
     };
 
-    getUserAuthenticationDataBase = (event) => {
-        event.preventDefault();
-        const retrievedUpdatedUsers = JSON.parse(localStorage.getItem('updatedUsers'));
-        const { users } = this.state;
-        const userGetted = users.filter((user) => user)
-        this.setState({
-            getUser: userGetted,
-        }) 
+    // getUserAuthenticationDataBase = (event) => {
+    //     event.preventDefault();
+    //     const retrievedUpdatedUsers = JSON.parse(localStorage.getItem('updatedUsers'));
+    //     const { users } = this.state;
+    //     const userGetted = users.filter((user) => user)
+    //     this.setState({
+    //         getUser: userGetted,
+    //     }) 
         
-        console.log(retrievedUpdatedUsers, 'localstorage');
-    };
+    //     console.log(retrievedUpdatedUsers, 'localstorage');
+    // };
     
 
     render() { 
         const { location:{ pathname } } = this.props;
-        const { showAuthentication, identification, idBtnIdentification, pokename, password, email  } = this.state;
-        console.log(this.state.pokename,this.state.password,this.state.email,this.state.users);
+        const { showAuthentication, identification, idBtnIdentification, pokename, password, email, errorPokename, errorEmail, errorPassword  } = this.state;
+
         return (         
             <section className="home">
                 <Header 
@@ -104,6 +155,9 @@ class Home extends Component {
                         password={password}
                         email={email}
                         idBtnIdentification={idBtnIdentification}
+                        errorPokename= {errorPokename}
+                        errorEmail = {errorEmail}
+                        errorPassword = {errorPassword}
                     />
                 }
             </section>
