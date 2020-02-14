@@ -109,15 +109,16 @@ class Home extends Component {
                         password,
                     };
                 
-                retrievedUsers.push(user);
-        
-                this.setState({
-                    users: [...this.state.users, user],
-                })
-                localStorage.setItem('updatedUsers', JSON.stringify(retrievedUsers));
+                    retrievedUsers.push(user);
+            
+                    this.setState({
+                        users: [...this.state.users, user],
+                    })
+                    localStorage.setItem('updatedUsers', JSON.stringify(retrievedUsers));
+                }   
             })
         }
-       
+    
         // this.handleCloseIdentification();
     };
 
