@@ -47,7 +47,7 @@ class Home extends Component {
     addUserAuthenticationDataBase = (event) => {
         event.preventDefault();
 
-        const { email, password, pokename } = this.state;
+        const { email, password, pokename, errorEmail, errorPokename, errorPassword } = this.state;
         const retrievedUsers = JSON.parse(localStorage.getItem('updatedUsers'));
         let user;
         console.log(retrievedUsers.length, 'retrievedusers');
@@ -62,12 +62,12 @@ class Home extends Component {
             retrievedUsers.push(user);
 
             console.log(retrievedUsers);
-
-            // localStorage.setItem('updatedUsers', JSON.stringify(retrievedUsers));
         
             this.setState({
                 users: [...this.state.users, user],
             })
+            localStorage.setItem('updatedUsers', JSON.stringify(retrievedUsers));
+            this.handleCloseIdentification();
         } else {
             retrievedUsers.forEach((userGetted) => {
             
@@ -108,18 +108,20 @@ class Home extends Component {
                     user = {
                         password,
                     };
+                }
                 
-                    retrievedUsers.push(user);
-            
-                    this.setState({
-                        users: [...this.state.users, user],
-                    })
-                    localStorage.setItem('updatedUsers', JSON.stringify(retrievedUsers));
-                }   
             })
+            retrievedUsers.push(user);
+            
+            this.setState({
+                users: [...this.state.users, user],
+            })
+
+            localStorage.setItem('updatedUsers', JSON.stringify(retrievedUsers));
+            if (errorEmail === false && errorPokename === false && errorPassword === false ) {
+                this.handleCloseIdentification();
+            }
         }
-    
-        // this.handleCloseIdentification();
     };
 
     // getUserAuthenticationDataBase = (event) => {
