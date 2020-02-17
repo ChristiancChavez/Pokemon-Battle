@@ -2,15 +2,16 @@ import React from 'react';
 //styles
 import './Input.scss';
 
-const Input = ({ label }) => (
+const Input = ({ label, onChange, type, name, pattern, title }) => (
     <div className="input">
         <label>{label}</label>
         <input
-            type="text"  
-            // pattern="[a-z0-9]{2,15}" 
-            // title="Your username must be contain one number at least and be 8 to 12 in length" 
+            type={type}  
+            name={name}
+            pattern={pattern} 
+            title={title}
             required
-            // onChange={this.onChange} 
+            onChange={onChange} 
         />
     </div>
 )
