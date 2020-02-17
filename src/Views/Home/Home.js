@@ -53,7 +53,7 @@ class Home extends Component {
         let user;
         console.log(retrievedUsers.length, 'retrievedusers');
         
-        if(retrievedUsers.length === 0){
+        if(!retrievedUsers.length){
             user = {
                 pokename,
                 email,
@@ -125,17 +125,17 @@ class Home extends Component {
         }
     };
 
-    // getUserAuthenticationDataBase = (event) => {
-    //     event.preventDefault();
-    //     const retrievedUpdatedUsers = JSON.parse(localStorage.getItem('updatedUsers'));
-    //     const { users } = this.state;
-    //     const userGetted = users.filter((user) => user)
-    //     this.setState({
-    //         getUser: userGetted,
-    //     }) 
+    getUserAuthenticationDataBase = (event) => {
+        event.preventDefault();
+        const retrievedUpdatedUsers = JSON.parse(localStorage.getItem('updatedUsers'));
+        const { users } = this.state;
+        const userGetted = users.filter((user) => user)
+        this.setState({
+            getUser: userGetted,
+        }) 
         
-    //     console.log(retrievedUpdatedUsers, 'localstorage');
-    // };
+        console.log(retrievedUpdatedUsers, 'localstorage');
+    };
     
 
     render() { 
