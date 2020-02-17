@@ -8,7 +8,7 @@ import './Authentication.scss';
 
 const Authentication = ({ handleChange, identification, handleCloseIdentification, addUserAuthenticationDataBase, getUserAuthenticationDataBase, password, pokename, email, errorPokename, errorEmail, errorPassword })=> {
    
-    const userSignUp = identification === 'signup'? false : true;
+    const userSignUp = identification !== 'signup'
     const onSubmitFunc = identification === 'login' ? addUserAuthenticationDataBase : getUserAuthenticationDataBase;
     return (
         <div className="authentication">
@@ -23,7 +23,7 @@ const Authentication = ({ handleChange, identification, handleCloseIdentificatio
                         pattern='[a-z0-9]{4,6}'
                         value={pokename}
                         title='Your username must be contain one number at least and be 4 to 6 in length' 
-                        onChange={event => handleChange('pokename', event.target.value)}
+                        onChange={(event) => handleChange(event)}
                     />
                     {errorPokename && 
                         <Error name={pokename} />
@@ -37,7 +37,7 @@ const Authentication = ({ handleChange, identification, handleCloseIdentificatio
                                 value={email}
                                 title='Your e-mail must be in the following order: characters@characters.domain'
                                 pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$' 
-                                onChange={event => handleChange('email', event.target.value)}
+                                onChange={(event) => handleChange(event)}
                             />
                             {errorEmail && 
                                 <Error  name={email} />
@@ -51,7 +51,7 @@ const Authentication = ({ handleChange, identification, handleCloseIdentificatio
                         value={password} 
                         pattern="[a-z0-9]{8,15}"
                         title='Your password must be contain one number at least and be 8 to 15 in length' 
-                        onChange={event => handleChange('password', event.target.value)}
+                        onChange={(event) => handleChange(event)}
                     />
                     {errorPassword && 
                         <Error  name={password}/>

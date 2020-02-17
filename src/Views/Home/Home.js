@@ -25,9 +25,10 @@ class Home extends Component {
         localStorage.setItem('updatedUsers', JSON.stringify(this.state.users));
     };
     
-    handleChange = (name, value) => {
+    handleChange = (event) => {
+        const eventTarget = event.target;
         this.setState({
-            [name]: value
+            [eventTarget.name]: eventTarget.value
         })
     };
 
