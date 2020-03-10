@@ -61,8 +61,6 @@ class Home extends Component {
             };
 
             retrievedUsers.push(user);
-
-            console.log(retrievedUsers);
         
             this.setState({
                 users: [...this.state.users, user],
