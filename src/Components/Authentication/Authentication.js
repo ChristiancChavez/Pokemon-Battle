@@ -122,7 +122,7 @@ class Authentication extends Component  {
                         <Button classBtn="yellow"  type="submit">{identification}</Button>
                         <div className="form__social">
                             {/* <Button classBtn="facebook" data-width="" data-size="medium" data-button-type="login_with" data-auto-logout-link="true" data-use-continue-as="false">Facebook</Button> */}
-                            <div className=" facebook fb-login-button " data-width="" data-size="medium" data-button-type="login_with" data-auto-logout-link="true" data-use-continue-as="false" ></div>
+                            <div className="  fb-login-button " data-width="" data-size="medium" data-button-type="login_with" data-auto-logout-link="true" data-use-continue-as="false" ></div>
                             <Button classBtn="google">Google</Button>
                         </div>
                     </form>
