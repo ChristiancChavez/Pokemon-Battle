@@ -37,7 +37,6 @@ class Authentication extends Component  {
     };
 
     statusChangeCallback = (response) => {
-        console.log(response, 'heyyyyyyy');
         if(response.status === 'connected') {
             this.setState({
                 loggedStatus: true,
@@ -80,12 +79,12 @@ class Authentication extends Component  {
                         <h3>{identification}</h3>
                         <Button classBtn="close-authentication" onClick={handleCloseIdentification}>X</Button>
                         <Input 
-                            label='Pokename' 
-                            name='pokename'
-                            type='text' 
-                            pattern='[a-z0-9]{4,6}'
+                            label="Pokename" 
+                            name="pokename"
+                            type="text" 
+                            pattern="[a-z0-9]{4,6}"
                             value={pokename}
-                            title='Your username must be contain one number at least and be 4 to 6 in length' 
+                            title="Your username must be contain one number at least and be 4 to 6 in length" 
                             onChange={(event) => handleChange(event)}
                         />
                         {errorPokename && 
@@ -94,12 +93,12 @@ class Authentication extends Component  {
                         {userSignUp && 
                             <Fragment>
                                 <Input 
-                                    label='E-mail' 
-                                    type='email'
-                                    name='email' 
+                                    label="E-mail" 
+                                    type="email"
+                                    name="email" 
                                     value={email}
-                                    title='Your e-mail must be in the following order: characters@characters.domain'
-                                    pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$' 
+                                    title="Your e-mail must be in the following order: characters@characters.domain"
+                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
                                     onChange={(event) => handleChange(event)}
                                 />
                                 {errorEmail && 
@@ -108,12 +107,12 @@ class Authentication extends Component  {
                             </Fragment>
                         }
                         <Input 
-                            label='Password' 
-                            type='password' 
-                            name='password'
+                            label="Password" 
+                            type="password" 
+                            name="password"
                             value={password} 
                             pattern="[a-z0-9]{8,15}"
-                            title='Your password must be contain one number at least and be 8 to 15 in length' 
+                            title="Your password must be contain one number at least and be 8 to 15 in length" 
                             onChange={(event) => handleChange(event)}
                         />
                         {errorPassword && 

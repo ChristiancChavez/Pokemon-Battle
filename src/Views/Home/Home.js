@@ -117,7 +117,7 @@ class Home extends Component {
             })
 
             localStorage.setItem('updatedUsers', JSON.stringify(retrievedUsers));
-            if (errorEmail === false && errorPokename === false && errorPassword === false ) {
+            if (!errorEmail  && !errorPokename  && !errorPassword  ) {
                 this.handleCloseIdentification();
             }
         }
