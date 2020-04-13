@@ -2,7 +2,7 @@ import React, { Fragment, Component } from 'react';
 //Components
 import Input from '../Input';
 import Button from '../Button';
-import Error from '../Error-Input';
+import Error from '../ErrorInput';
 import StatusConnection from '../StatusConnection';
 //styles
 import './Authentication.scss';

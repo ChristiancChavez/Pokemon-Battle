@@ -133,8 +133,6 @@ class Home extends Component {
         this.setState({
             getUser: userGetted,
         }) 
-        
-        console.log(retrievedUpdatedUsers, 'localstorage');
     };
     
 
