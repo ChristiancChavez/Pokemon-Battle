@@ -1,15 +1,19 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from '../Button'
+import Button from '../Button';
+import Userprofile from '../UserProfile/UserProfile';
+import AuthenticationBtns from '../AuthenticationBtns/AuthenticationBtnsl'
 //Assets
 import pokeball from '../../Assets/images/pokeball.png';
 //styles
 import './Header.scss';
 
 
-const Header = ({ title, handleIndentification }) => {
+const Header = ({ title, handleIndentification, authenticated }) => {
    const mainTitle = title.substring(1) || 'Home'; 
+
+   const authenticationPanel = authenticated ? <UserProfile /> : <AuthenticationBtns handleIndentification={handleIndentification}/>; 
 
     return (
         <section className="header">
@@ -22,8 +26,7 @@ const Header = ({ title, handleIndentification }) => {
                 <a href="/" className="header-nav__link">Tournament</a>
                 <a href="/" className="header-nav__link">PokeCards</a>
                 <a href="/" className="header-nav__link">PokeAlbum</a>
-                <Button classBtn="transparent" onClick={() => handleIndentification('login')}>login</Button>
-                <Button classBtn="blue" onClick={() => handleIndentification('signup')}>signup</Button>
+                {authenticationPanel}
             </nav>
         </section>
     )

@@ -6,7 +6,7 @@ import './StatusConnection.scss';
 const StatusConnection = ({ deleteLogStatus }) => {
     return (
         <div className="connection">
-            <Motion defaultStyle={{x:-250, opacity: 0, transition: 'all 1s ease-out', rotate:-300,}} style={{x:spring(10), opacity: spring(1), transition:spring('all 1s ease-out'), rotate:spring(0)}}>
+            <Motion defaultStyle={{x:-270, opacity: 0, transition: 'all 1s ease-out', rotate:-300,}} style={{x:spring(10), opacity: spring(1), transition:spring('all 1s ease-out'), rotate:spring(0)}}>
                 {(style) =>(
                     <img 
                         onClick={deleteLogStatus}

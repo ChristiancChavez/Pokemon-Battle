@@ -18,7 +18,8 @@ class Home extends Component {
         getUser: {},
         errorPokename: false,
         errorEmail: false,
-        errorPassword: false
+        errorPassword: false,
+        authenticated: false
     }
 
     componentDidMount = () => {
@@ -42,6 +43,7 @@ class Home extends Component {
     handleCloseIdentification = () => {
         this.setState({
             showAuthentication: false,
+            authenticated: true
         })
     };
 
@@ -138,13 +140,14 @@ class Home extends Component {
 
     render() { 
         const { location:{ pathname } } = this.props;
-        const { showAuthentication, identification, idBtnIdentification, pokename, password, email, errorPokename, errorEmail, errorPassword  } = this.state;
+        const { showAuthentication, identification, idBtnIdentification, pokename, password, email, errorPokename, errorEmail, errorPassword, authenticated  } = this.state;
 
         return (         
             <section className="home">
                 <Header 
                     title={pathname} 
                     handleIndentification={this.handleIndentification} 
+                    authenticated={authenticated}
                 />
                 {showAuthentication && 
                     <Authentication 

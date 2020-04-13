@@ -12,6 +12,7 @@ class Authentication extends Component  {
         userID: '',
         loggedStatus: false,
         showApproved: false,
+
     }
     componentDidMount() {
         window.fbAsyncInit = () => {
