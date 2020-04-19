@@ -86,7 +86,7 @@ class Authentication extends Component  {
                             pattern="[a-z0-9]{4,6}"
                             value={pokename}
                             title="Your username must be contain one number at least and be 4 to 6 in length" 
-                            onChange={(event) => handleChange(event)}
+                            onChange={handleChange}
                         />
                         {errorPokename && 
                             <Error name={pokename} />
@@ -100,7 +100,7 @@ class Authentication extends Component  {
                                     value={email}
                                     title="Your e-mail must be in the following order: characters@characters.domain"
                                     pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
-                                    onChange={(event) => handleChange(event)}
+                                    onChange={handleChange}
                                 />
                                 {errorEmail && 
                                     <Error  name={email} />
@@ -114,7 +114,7 @@ class Authentication extends Component  {
                             value={password} 
                             pattern="[a-z0-9]{8,15}"
                             title="Your password must be contain one number at least and be 8 to 15 in length" 
-                            onChange={(event) => handleChange(event)}
+                            onChange={handleChange}
                         />
                         {errorPassword && 
                             <Error  name={password}/>
