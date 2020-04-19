@@ -6,6 +6,7 @@ $background-update-btn: #ffffff;
 $background-hover-update-btn: #c2bebe;
 $none-value: none;
 $font-family-solid: 'pokemonSolid';
+$font-family: 'pokemonSolid';
 
 //mixins
 @mixin color-pokemon-font {
@@ -82,8 +83,9 @@ $font-family-solid: 'pokemonSolid';
         
         &__social {
             display: flex;
-            flex-direction: row;
-            justify-content: space-around;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             margin-top: 2em;
         }
     }
